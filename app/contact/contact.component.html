@@ -1,0 +1,102 @@
+
+<main id="main">
+
+  <!-- ======= Contact Section ======= -->
+  <section id="contact" class="contact">
+    <div class="container" data-aos="fade-up">
+
+      <div class="section-title">
+        <h2>Contact</h2>
+
+      </div>
+
+      <div>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3084.3666815496545!2d73.04280661929906!3d19.1878913580966!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7bfaa643f254f%3A0xfc87dae83501c2ef!2sDiva%2C%20Thane%2C%20Maharashtra%20400612!5e0!3m2!1sen!2sin!4v1676226658310!5m2!1sen!2sin" width="1110" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+
+      <div class="row mt-5">
+
+        <div class="col-lg-4">
+          <div class="info">
+            <div class="address">
+              <i class="bi bi-geo-alt"></i>
+              <h4 [ngStyle]="contacttstyle">Location:</h4>
+              <p>{{location}}</p>
+            </div>
+
+            <div class="email">
+              <i class="bi bi-envelope"></i>
+              <h4 [ngStyle]="contacttstyle">Email:</h4>
+              <p>{{myemail}}</p>
+            </div>
+
+            <div class="phone">
+              <i class="bi bi-phone"></i>
+              <h4 [ngStyle]="contacttstyle">Call:</h4>
+              <p>{{myphone}}</p>
+            </div>
+
+          </div>
+
+        </div>
+
+        <div class="col-lg-8 mt-5 mt-lg-0">
+
+          <form [formGroup]="sent" (ngSubmit)="sent.valid && sentMessage()">
+            <div class="model-body" id="place">
+                  <div class="row">
+                    <div class="col-xl-6 form-group">
+                      <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" formControlName="name">
+                      <div class="alert alert-danger" role="alert"
+                      *ngIf="namectr.dirty && namectr.invalid">
+                        <div *ngIf="namectr.hasError('required')">
+                          Name field is required.
+                        </div>
+                        <div *ngIf="namectr.hasError('minlength')">
+                          Name must be atleast {{namectr.errors!['minlength'].requiredLength}}
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-xl-6 form-group">
+                      <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" formControlName="email">
+                      <div class="alert alert-danger" role="alert"
+                    *ngIf="emailctr.dirty && emailctr.invalid">
+                    <div *ngIf="emailctr.hasError('required')">
+                      Email field is required.
+                    </div>
+                    <div *ngIf="emailctr.hasError('email')">
+                      Provide valid Email ID
+                    </div>
+                    </div>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" formControlName="subject">
+                    <div class="alert alert-danger" role="alert"
+                    *ngIf="subjectctr.dirty && subjectctr.invalid">
+                    <div *ngIf="subjectctr.hasError('required')">
+                      Add subject
+                    </div>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <textarea class="form-control" name="message" id="message" rows="5" placeholder="Message" formControlName="message"></textarea>
+                    <div class="alert alert-danger" role="alert"
+                    *ngIf="messagectr.dirty && messagectr.invalid">
+                    <div *ngIf="messagectr.hasError('required')">
+                      Write some message
+                    </div>
+                    </div>
+                  </div>
+                  <div class="text-center"><button id="btnp" class="btn btn-dark" type="submit" [disabled]="sent.invalid">Send Message</button></div>
+              </div>
+                </form>
+
+        </div>
+
+      </div>
+
+    </div>
+  </section><!-- End Contact Section -->
+
+</main>

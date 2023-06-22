@@ -1,0 +1,73 @@
+
+.navbar-nav.navbar-center {
+  position: absolute;
+  left: 50%;
+  transform: translatex(-50%);
+}
+
+// .navbar-left{
+//   position: relative;
+//   left: 90%;
+//   transform: translatex(-50%);
+// }
+.navbar{
+  background-color: #FCFFE7;
+}
+.navbar-brand{
+  color: #3e3f30de;
+  font-family: fantasy;
+  font-size: 30px;
+}
+#hero {
+  width: 100%;
+  height: 100vh;
+  background: url("../assets/thumb.jpg") top right;
+  background-size: cover;
+}
+#hero{
+  text-align: center;
+  margin-top: 0%;
+}
+#hero h1{
+  font-family: 'IBM Plex Serif', serif;
+}
+#hero p{
+  font-family: 'IBM Plex Sans', sans-serif;
+}
+.btn {
+  color: #ffffff;
+  background-color: #33a38d;
+  font-size: 20px;
+  border: 0px solid #2d63c8;
+  border-radius: 30px;
+  padding: 10px 30px;
+  cursor: pointer;
+  font-family: 'Oswald', sans-serif;
+}
+.btn:hover {
+  color: #0c0c0e;
+  background-color: #ffffff;
+}
+// font-family: 'Bebas Neue', cursive;
+// font-family: 'IBM Plex Sans', sans-serif;
+// font-family: 'IBM Plex Serif', serif;
+#footer{
+  background: #FCFFE7;
+  margin-bottom: 3%;
+}
+#footer .copyright {
+  text-align: center;
+  padding-top: 30px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+#footer .credits {
+  padding-top: 4px;
+  text-align: center;
+  font-size: 13px;
+}
+
+#footer .credits a {
+  color: #fff;
+}
+

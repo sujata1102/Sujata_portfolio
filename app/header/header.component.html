@@ -1,0 +1,34 @@
+<!-- Navbar -->
+<nav class="navbar navbar-expand-sm navbar-dark bg-dark">
+  <div class="container-fluid">
+    <a class="navbar-brand" [routerLink]="['/home']">{{title}}</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav navbar-center">
+          <li><a class="nav-link scrollto active" [routerLinkActive]="['active']" [routerLink]="['/home']">Home</a></li>
+          <li><a class="nav-link scrollto" [routerLink]="['/about']">About</a></li>
+          <li><a class="nav-link scrollto" [routerLink]="['/resume']">Personal Profile</a></li>
+          <li><a class="nav-link scrollto " [routerLink]="['/portfolio']">Portfolio</a></li>
+          <li><a class="nav-link scrollto" [routerLink]="['/contact']">Contact</a></li>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+      </ul>
+      <ul class="navbar-nav position-absolute end-0">
+        <li class="nav-item">
+          <a class="nav-link" href="https://www.facebook.com/"><img src="./assets/facebook.svg"></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="https://www.instagram.com/"><img src="./assets/instagram.svg"></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="https://www.linkedin.com/in/sujata-gaikwad-437005128/"><img src="./assets/linkedin.svg"></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="https://twitter.com/"><img src="./assets/twitter.svg"></a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<router-outlet></router-outlet>
